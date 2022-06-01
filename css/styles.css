@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Blue: hsl(223, 87%, 63%);
+    --PaleGreen: hsl(165, 45%, 39%);
+    --VeryDarkBlue: hsl(209, 33%, 12%);
+    --Beige: hsl(60, 56%, 91%);
+}
+
+body {
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    /* min-width: 660px; */
+}
+
+header {
+    margin: 50px auto 60px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    color: #a1c181;
+    --x-offset: -0.0625em;
+    --y-offset: 0.0625em;
+    --stroke: 0.025em;
+    --background-color: white;
+    --stroke-color: lightblue;
+
+    text-shadow: var(--x-offset) var(--y-offset) 0px var(--background-color),
+        calc(var(--x-offset) - var(--stroke))
+            calc(var(--y-offset) + var(--stroke)) 0px var(--stroke-color);
+}
+
+.container-main {
+    width: 70%;
+    margin: 50px auto 0;
+    display: flex;
+}
+
+.category-product {
+    background-color: var(--Beige);
+    margin: 0 auto 100px;
+    padding: 40px;
+    box-shadow: 3px 3px 5px black;
+}
+
+.category-product h2 {
+    margin-bottom: 20px;
+    color: var(--PaleGreen);
+    font-weight: 700;
+    text-align: center;
+}
+
+.category-product li {
+    color: var(--VeryDarkBlue);
+    font-weight: 400;
+    /* text-align: center; */
+}
+
+.category-product li::marker {
+    color: rgb(0, 47, 255);
+    font-weight: 700;
+}
+
+.attribution {
+    font-size: 1em;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ------------- Mobile ----------- */
+@media (max-width: 940px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .container-main {
+        display: block;
+        width: 50%;
+    }
+
+    .category-product {
+        margin-bottom: 10px;
+    }
+
+    .category-product li {
+        color: var(--VeryDarkBlue);
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .attribution {
+        margin: 100px auto 50px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .attribution {
+        margin: 100px auto 50px;
+        font-size: .8em;
+    }
+}
